@@ -7,33 +7,36 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="site_wide.css">
     <script src="javascript/javascript.js"></script>
-    <title>Mini-Projects Contents Page</title>
+    <script src="javascript/age.js"></script>
+    <title>Age from DOB</title>
 </head>
 <body onload="copyright()">
 
     <div class="nav">
             <div class="nav_logo"><img src="images/code.png" alt="Code Image" width="60px" height="60px"></div>
-            <div class="nav_text">Mini-Projects Contents Page</div>
+            <div class="nav_link"><a href="index.html">Back to Contents Page...</a></div>
         </div>
 
     <div class="main">
 
+        <div id="div_notes">
+            <h1>Age from DOB</h1>
+            <p class ="txt_notes">This mini-project calculates a persons age from the date of birth entered.</p>
+            <p class ="txt_notes">Basic arithmetic operators and if/else statement are used to work out the age.</p>
+            <p class ="txt_notes"></p>
+        </div>
 
+<div class="project">
+    <form name = frm_age>
+        <p><label class="lbl">Enter Date of Birth: </label> 
+            <input type="text" id="in_day" size="4">
+            <input type="text" id="in_month" size = "12">
+            <input type="text" id="in_year" size="6"></p>
+        <p id="out_age"></p>
+        <p><button type="button" class="btn" onClick="calcAge()">Calculate Age</button>
+        <button type="button" class="btn" onClick="resetAge()">Reset</button></p>
 
-<div class="project">            
-    <h1></h1>
-
-    <h1>HTML, CSS and JavaScript Basics</h1>
-        <ol>
-            <li class="contents_item"><a href="color_change.html">Color Change - Using JavaScript to change the styling of a Div.</a></li>
-            <li class="contents_item"><a href="class_grades.html">Class Grades - Using the conditional statement if, else if and else</a></li>
-            <li class="contents_item"><a href="VAT_calc.html">Vat Calculator - Using basic arithmetic operators.</a></li>
-            <li class="contents_item"><a href="currency_convertor.html">Currency Convertor - Using basic arithmetic operators.</a></li>
-            <li class="contents_item"><a href="widgets.html">Widgets - Embedded using code from relevant sites.</a></li>
-            <li class="contents_item"><a href="age.html">Age Calculator - Using basic arithmetic operators and if/else statement.</a></li>
-            <li class="contents_item"><a href="#">Roman Numeral Convertor - To be added (Future Mini-Project)</a></li>
-        </ol>
-    </div>
+    </form>
 
 </div>
 
