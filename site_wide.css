@@ -139,3 +139,20 @@ input {
 .div_twitter, .div_soundcloud, .div_youtube {
     padding-left: 35px;
 }
+
+.santa {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  height: 75%;
+
+}
+  .display {
+    text-align: center;
+    font-size: 24pt;
+  }
+
+  
+ 
+

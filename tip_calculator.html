@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="site_wide.css">
     <script src="javascript/javascript.js"></script>
-    <script src="javascript/age.js"></script>
-    <title>Age from DOB</title>
+    <script src="javascript/tip_calculator.js"></script>
+    <title>Tip Calculator</title>
 </head>
 <body onload="copyright()">
 
@@ -20,21 +20,21 @@
     <div class="main">
 
         <div id="div_notes">
-            <h1>Age from DOB</h1>
-            <p class ="txt_notes">This mini-project calculates a persons age from the date of birth entered.</p>
-            <p class ="txt_notes">Basic arithmetic operators and if/else statement are used to work out the age.</p>
+            <h1>Tip Calculator</h1>
+            <p class ="txt_notes">This mini-project is a tip calculator which works out the tip amount and the total due.</p>
+            <p class ="txt_notes">Basic arithmetic is used for this project.</p>
             <p class ="txt_notes"></p>
         </div>
 
 <div class="project">
-    <form name = frm_age>
-        <p><label class="lbl">Enter Date of Birth: </label> 
-            <input type="text" id="in_day" size="4">
-            <input type="text" id="in_month" size = "12">
-            <input type="text" id="in_year" size="6"></p>
-        <p id="out_age"></p>
-        <p><button type="button" class="btn" onclick="calcAge()">Calculate Age</button>
-        <button type="button" class="btn" onclick="resetAge()">Reset</button></p>
+    
+    <form name="frm_tipcalc">
+
+        <p><label class = "lbl">Enter bill amount ($): </label><input type = "text" id = "in_bill"></p>
+        <p><label class = "lbl">Enter gratuity %: </label><input type = "text" id = "in_gratuity"></p>
+        <p><button type = "button" class = "btn" onclick = "func_tipcalc()">Calculate Tip</button> <button type = "button" class = "btn" onclick = "func_reset()">Reset</button></p>
+        <p id = "out_tip"></p>
+        <p id = "out_totalDue"></p>
 
     </form>
 

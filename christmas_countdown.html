@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="site_wide.css">
     <script src="javascript/javascript.js"></script>
-    <script src="javascript/age.js"></script>
-    <title>Age from DOB</title>
+    <script src="javascript/christmas_countdown.js"></script>
+    <title>Christmas Countdown</title>
 </head>
-<body onload="copyright()">
+<body onload="copyright(); christmasCountdown()">
 
     <div class="nav">
             <div class="nav_logo"><img src="images/code.png" alt="Code Image" width="60px" height="60px"></div>
@@ -20,23 +20,16 @@
     <div class="main">
 
         <div id="div_notes">
-            <h1>Age from DOB</h1>
-            <p class ="txt_notes">This mini-project calculates a persons age from the date of birth entered.</p>
-            <p class ="txt_notes">Basic arithmetic operators and if/else statement are used to work out the age.</p>
+            <h1>Christmas Countdown</h1>
+            <p class ="txt_notes">This mini-project calculates the number of days from today until Christmas.</p>
+            <p class ="txt_notes">It uses basic arithmetic and date objects.</p>
             <p class ="txt_notes"></p>
         </div>
 
 <div class="project">
-    <form name = frm_age>
-        <p><label class="lbl">Enter Date of Birth: </label> 
-            <input type="text" id="in_day" size="4">
-            <input type="text" id="in_month" size = "12">
-            <input type="text" id="in_year" size="6"></p>
-        <p id="out_age"></p>
-        <p><button type="button" class="btn" onclick="calcAge()">Calculate Age</button>
-        <button type="button" class="btn" onclick="resetAge()">Reset</button></p>
-
-    </form>
+   <div><img src="images\santa.png" alt="Santa Image" class = "santa"><p class="display" id = "display_days"></p>
+    </div> 
+    
 
 </div>
 
