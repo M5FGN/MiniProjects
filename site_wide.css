@@ -153,6 +153,12 @@ input {
     font-size: 24pt;
   }
 
-  
+  .dice {
+      font-size: 70px;
+  }
+
+  .dice_display {
+    text-align: left;
+  }
  
 
