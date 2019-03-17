@@ -1,5 +1,7 @@
-function diceThrow () {
-    let dice = ((Math.random())*6).toFixed(0);
+function diceThrow (max,min) {
+    
+    let dice = (math.floor(math.random() * (max - min + 1)) +1);
+    console.log(dice);
 
     if (dice == 0) {
         diceThrow();
