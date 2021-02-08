@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b9cf35b5bd.js" crossorigin="anonymous"></script>
+    <script src="stitch.js"></script>
+<link rel="stylesheet" href="stitch.css">
+    <title>Stitch Badness Level</title>
+</head>
+<body onload="reset()">
+ 
+<div class="stitch">  
+        <h1>Stitch Badness Level Chart</h1>
+        <div class="stitch-actions">
+
+            <div class="hugs">
+                <button onclick="more(action='hugs')" id="btn_more_hugs" type="button" class = "btn_more" >Hugs <i class="far fa-arrow-alt-circle-up"></i></button>
+                <label for="btn_hugs" id="lbl_hugs"></label>
+                <button onclick="less(action='hugs')" id="btn_less_hugs" type="button" class = "btn_less"><i class="far fa-arrow-alt-circle-down"></i> Hugs</button>
+            </div> 
+
+            <div class="cake">
+                <button onclick="more(action='cake')" id="btn_more_cake" type="button" class = "btn_more" >Coconut Cake <i class="far fa-arrow-alt-circle-up"></i></button>
+                <label for="btn_cake" id="lbl_cake"></label>
+                <button onclick="less(action='cake')" id="btn_less_cake" type="button" class = "btn_less"><i class="far fa-arrow-alt-circle-down"></i> Coconut Cake</button>
+            </div>
+
+            <div class="coffee">
+                <button onclick="more(action='coffee')" id="btn_more_coffee" type="button" class = "btn_more" > Coffee <i class="far fa-arrow-alt-circle-up"></i></button>
+                <label for="btn_coffee" id="lbl_coffee"></label>
+                <button onclick="less(action='coffee')" id="btn_less_coffee" type="button" class = "btn_less" ><i class="far fa-arrow-alt-circle-down"></i> Coffee</button>
+            </div>
+            
+            <div class="water">
+                <button onclick="more(action='water')" id="btn_more_water" class = "btn_more" type="button">Water <i class="far fa-arrow-alt-circle-up"></i></button>
+                <label for="btn_water" id="lbl_water"></label>
+                <button onclick="less(action='water')" id="btn_less_water" type="button" class = "btn_less"><i class="far fa-arrow-alt-circle-down"></i> Water</button>
+            </div>
+
+        </div>   
+
+    <div class="stitch-visual">  
+        <div class="key"><h4><i class="fas bad fa-square"></i> Bad <i class="far good fa-square"></i> Good</h4></div>  
+        <p></p>
+        <img id="img_badness_level" src="assets/bad0.jpg" alt="Stitch at Badness Level 1">
+        <p id="badness-level"></p>
+        <p></p>     
+        <button type="button" onclick="reset()">Reset<br>Badness Level</button>
+    </div>
+
+</div> 
+
+
+
+</body>
+</html>

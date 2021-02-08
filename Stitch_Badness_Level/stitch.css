@@ -1,0 +1,92 @@
+@media screen and (max-width: 660px) {
+    .stitch-actions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0px 100px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .stitch-actions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+}
+
+@media screen and (min-width:661px) {
+    .btn_less {
+        text-align: left;
+    }
+    
+    .btn_more {
+        text-align: right;
+    }
+}
+
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    padding: 20px 0px;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+}
+
+.far {
+    font-size: 20px;
+}
+
+.stitch {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid grey;
+    padding: 0px 50px 20px 50px;
+    box-shadow: 5px 5px 10px #aab2bd;
+}
+
+.stitch-visual img {
+    width: 35%;
+}
+
+#badness-level {
+    font-family: 'Permanent Marker', cursive;
+}
+
+button {
+    width: 160px;
+    font-size: 14px;
+    font-family: 'Permanent Marker', cursive;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+label { 
+    display: inline-block;
+    font-family: 'Permanent Marker', cursive;
+    width: 150px;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid silver;
+}
+
+.bad {
+    font-size: 20px;
+    color: red;
+    padding: 0 10px;
+}
+
+.good {
+    font-size: 20px;
+    padding: 0 10px;
+}
