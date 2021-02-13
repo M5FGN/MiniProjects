@@ -1,0 +1,125 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1, h2, h3 {
+    font-family: 'Mountains of Christmas', cursive;
+    text-align: center; 
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 0px;
+}
+
+.advent__container {
+    margin: 20px;
+    padding: 10px;
+    background-color: skyblue;
+    box-shadow: 5px 5px 10px #aab2bd;
+}
+
+.advent__title {
+    color: red;
+    text-shadow: 3px 3px 5px rgb(53, 182, 13);
+}
+
+.doors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.door {
+    margin: 50px;
+}
+
+.door_open {
+    display: none;
+    width: 300px;
+    height: 440px;
+    position: relative;
+    border: 2px solid silver; 
+    border-radius: 15px;
+}
+
+.door_closed {
+    display: block;
+    width: 300px;
+    height: 440px;
+    position: relative;
+    border: 2px solid silver; 
+    border-radius: 15px;
+    background-color: skyblue;
+    border-radius: 15px;
+}
+
+.door_closed h2 {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.door_open {
+    background-color: whitesmoke;
+}
+
+.door_open img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index:-1;
+    box-shadow: 5px 5px 10px white;
+}
+
+.overlay {
+    font-size: 70px;
+    background-color: red;
+    width: 80%;
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;      
+}
+
+.door_open:hover .overlay {
+    opacity: 1;
+}
+
+.door_open:hover img {
+    opacity: 0.6;   
+    border-radius: 15px;
+}
+
+.reset {
+    font-size: 50px;
+    background-color: grey;
+    color: white;
+    padding: 15px 10px 10px 10px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    display: none;
+}
+
+.door_open:hover .reset {
+    display: block;
+}
+
