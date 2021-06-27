@@ -1,6 +1,5 @@
 body {
     margin: 0px;
-    padding: 0px;
 }
 
 h1, h2, h3 {
@@ -23,10 +22,8 @@ h3 {
 }
 
 .advent__container {
-    margin: 20px;
     padding: 10px;
     background-color: skyblue;
-    box-shadow: 5px 5px 10px #aab2bd;
 }
 
 .advent__title {

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="advent.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/b9cf35b5bd.js" crossorigin="anonymous"></script>
-<script src="advent.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b9cf35b5bd.js" crossorigin="anonymous"></script>
+    <script src="advent.js"></script>
     <title>Advent Calendar</title>
 </head>
+
 <body>
 
     <!--Image Source: https://www.goodhousekeeping.com/holidays/christmas-ideas/g1315/best-christmas-movies/?slide=1-->
@@ -19,373 +20,375 @@
 
         <div class="doors">
 
-        <div class="door door_1">
-            <div id="door_open_1"class="door_open" >
-                    <img  src="assets/1.jpg" alt="Door 1 Image"> 
+            <div class="door door_1">
+                <div id="door_open_1" class="door_open">
+                    <img src="assets/1.jpg" alt="Door 1 Image">
                     <div class="overlay">
                         <h2>Elf</h2>
                         <h3>2003</h3>
                     </div>
-                    <div id="door_open_1"class="reset" onclick="reset_door(door=1)"><i class="fas fa-redo"></i></div>                  
-            </div>
- 
-            <div id="door_closed_1" class="door_closed" onclick="open_door(door=1)">
-                <h2>1</h2>
-            </div>
-        </div>
+                    <!-- Function being called with a parameter - "door" which is set to 1 -->
+                    <div id="door_open_1" class="reset" onclick="reset_door(door=1)"><i class="fas fa-redo"></i></div>
+                </div>
 
-        <div class="door door_11">
-            <div id="door_open_11" class="door_open" >
-                    <img src="assets/11.jpg" alt="Door 11 Image"> 
+                <div id="door_closed_1" class="door_closed" onclick="open_door(door=1)">
+                    <h2>1</h2>
+                </div>
+            </div>
+
+            <div class="door door_11">
+                <div id="door_open_11" class="door_open">
+                    <img src="assets/11.jpg" alt="Door 11 Image">
                     <div class="overlay">
                         <h2>The Santa Clause</h2>
                         <h3>1994</h3>
                     </div>
-                    <div id="door_open_11"class="reset" onclick="reset_door(door=11)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_11" class="reset" onclick="reset_door(door=11)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_11" class="door_closed" onclick="open_door(door=11)">
+                    <h2>11</h2>
+                </div>
             </div>
 
-            <div id="door_closed_11" class="door_closed" onclick="open_door(door=11)">
-                <h2>11</h2>
-            </div>
-        </div>
-
-        <div class="door door_17">
-            <div id="door_open_17" class="door_open" >
-                    <img src="assets/17.jpg" alt="Door 17 Image"> 
+            <div class="door door_17">
+                <div id="door_open_17" class="door_open">
+                    <img src="assets/17.jpg" alt="Door 17 Image">
                     <div class="overlay">
                         <h2>Four Christmases</h2>
                         <h3>2008</h3>
                     </div>
-                    <div id="door_open_17"class="reset" onclick="reset_door(door=17)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_17" class="reset" onclick="reset_door(door=17)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_17" class="door_closed" onclick="open_door(door=17)">
+                    <h2>17</h2>
+                </div>
             </div>
 
-            <div id="door_closed_17" class="door_closed" onclick="open_door(door=17)">
-                <h2>17</h2>
-            </div>
-        </div>
-
-        <div class="door door_9">
-            <div id="door_open_9" class="door_open" >
-                    <img src="assets/9.jpg" alt="Door 9 Image"> 
+            <div class="door door_9">
+                <div id="door_open_9" class="door_open">
+                    <img src="assets/9.jpg" alt="Door 9 Image">
                     <div class="overlay">
                         <h2>Love Actually</h2>
                         <h3>2003</h3>
                     </div>
-                    <div id="door_open_9"class="reset" onclick="reset_door(door=9)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_9" class="reset" onclick="reset_door(door=9)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_9" class="door_closed" onclick="open_door(door=9)">
+                    <h2>9</h2>
+                </div>
             </div>
 
-            <div id="door_closed_9" class="door_closed" onclick="open_door(door=9)">
-                <h2>9</h2>
-            </div>
-        </div>
-
-        <div class="door door_15">
-            <div id="door_open_15" class="door_open" >
-                    <img src="assets/15.jpg" alt="Door 15 Image"> 
+            <div class="door door_15">
+                <div id="door_open_15" class="door_open">
+                    <img src="assets/15.jpg" alt="Door 15 Image">
                     <div class="overlay">
                         <h2>The Christmas Chronicles</h2>
                         <h3>2018</h3>
                     </div>
-                    <div id="door_open_15"class="reset" onclick="reset_door(door=15)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_15" class="reset" onclick="reset_door(door=15)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_15" class="door_closed" onclick="open_door(door=15)">
+                    <h2>15</h2>
+                </div>
             </div>
 
-            <div id="door_closed_15" class="door_closed" onclick="open_door(door=15)">
-                <h2>15</h2>
-            </div>
-        </div>
-
-        <div class="door door_22">
-            <div id="door_open_22" class="door_open" >
-                    <img src="assets/22.jpg" alt="Door 22 Image"> 
+            <div class="door door_22">
+                <div id="door_open_22" class="door_open">
+                    <img src="assets/22.jpg" alt="Door 22 Image">
                     <div class="overlay">
                         <h2>Jingle All the Way</h2>
                         <h3>1996</h3>
                     </div>
-                    <div id="door_open_22"class="reset" onclick="reset_door(door=22)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_22" class="reset" onclick="reset_door(door=22)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_22" class="door_closed" onclick="open_door(door=22)">
+                    <h2>22</h2>
+                </div>
             </div>
 
-            <div id="door_closed_22" class="door_closed" onclick="open_door(door=22)">
-                <h2>22</h2>
-            </div>
-        </div>
-
-        <div class="door door_18">
-            <div id="door_open_18" class="door_open" >
-                    <img src="assets/18.jpg" alt="Door 18 Image"> 
+            <div class="door door_18">
+                <div id="door_open_18" class="door_open">
+                    <img src="assets/18.jpg" alt="Door 18 Image">
                     <div class="overlay">
                         <h2>Scrooged</h2>
                         <h3>1985</h3>
                     </div>
-                    <div id="door_open_18"class="reset" onclick="reset_door(door=18)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_18" class="reset" onclick="reset_door(door=18)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_18" class="door_closed" onclick="open_door(door=18)">
+                    <h2>18</h2>
+                </div>
             </div>
 
-            <div id="door_closed_18" class="door_closed" onclick="open_door(door=18)">
-                <h2>18</h2>
-            </div>
-        </div>
-
-        <div class="door door_2">
-            <div id="door_open_2"class="door_open" >
-                    <img src="assets/2.jpg" alt="Door 2 Image"> 
+            <div class="door door_2">
+                <div id="door_open_2" class="door_open">
+                    <img src="assets/2.jpg" alt="Door 2 Image">
                     <div class="overlay">
                         <h2>A Christmas Prince</h2>
                         <h3>2017</h3>
                     </div>
-                    <div id="door_open_2"class="reset" onclick="reset_door(door=2)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_2" class="reset" onclick="reset_door(door=2)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_2" class="door_closed" onclick="open_door(door=2)">
+                    <h2>2</h2>
+                </div>
             </div>
 
-            <div id="door_closed_2" class="door_closed" onclick="open_door(door=2)">
-                <h2>2</h2>
-            </div>
-        </div>
-
-        <div class="door door_10">
-            <div id="door_open_10" class="door_open" >
-                    <img src="assets/10.jpg" alt="Door 10 Image"> 
+            <div class="door door_10">
+                <div id="door_open_10" class="door_open">
+                    <img src="assets/10.jpg" alt="Door 10 Image">
                     <div class="overlay">
                         <h2>National Lampoons Christmas Vacation</h2>
                         <h3>1989</h3>
                     </div>
-                    <div id="door_open_10"class="reset" onclick="reset_door(door=10)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_10" class="reset" onclick="reset_door(door=10)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_10" class="door_closed" onclick="open_door(door=10)">
+                    <h2>10</h2>
+                </div>
             </div>
 
-            <div id="door_closed_10" class="door_closed" onclick="open_door(door=10)">
-                <h2>10</h2>
-            </div>
-        </div>
-
-        <div class="door door_6">
-            <div id="door_open_6" class="door_open" >
-                    <img src="assets/6.jpg" alt="Door 6 Image"> 
+            <div class="door door_6">
+                <div id="door_open_6" class="door_open">
+                    <img src="assets/6.jpg" alt="Door 6 Image">
                     <div class="overlay">
                         <h2>Home Alone</h2>
                         <h3>1990</h3>
                     </div>
-                    <div id="door_open_6"class="reset" onclick="reset_door(door=6)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_6" class="reset" onclick="reset_door(door=6)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_6" class="door_closed" onclick="open_door(door=6)">
+                    <h2>6</h2>
+                </div>
             </div>
 
-            <div id="door_closed_6" class="door_closed" onclick="open_door(door=6)">
-                <h2>6</h2>
-            </div>
-        </div>
-       
-        <div class="door door_21">
-            <div id="door_open_21" class="door_open" >
-                    <img src="assets/21.jpg" alt="Door 21 Image"> 
+            <div class="door door_21">
+                <div id="door_open_21" class="door_open">
+                    <img src="assets/21.jpg" alt="Door 21 Image">
                     <div class="overlay">
                         <h2>The Polar Express</h2>
                         <h3>2004</h3>
                     </div>
-                    <div id="door_open_21"class="reset" onclick="reset_door(door=21)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_21" class="reset" onclick="reset_door(door=21)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_21" class="door_closed" onclick="open_door(door=21)">
+                    <h2>21</h2>
+                </div>
             </div>
 
-            <div id="door_closed_21" class="door_closed" onclick="open_door(door=21)">
-                <h2>21</h2>
-            </div>
-        </div>
-
-        <div class="door door_4">
-            <div id="door_open_4"class="door_open" >
-                    <img src="assets/4.jpg" alt="Door 4 Image"> 
+            <div class="door door_4">
+                <div id="door_open_4" class="door_open">
+                    <img src="assets/4.jpg" alt="Door 4 Image">
                     <div class="overlay">
                         <h2>A Charlie Brown Christmas</h2>
                         <h3>1965</h3>
                     </div>
-                    <div id="door_open_4"class="reset" onclick="reset_door(door=4)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_4" class="reset" onclick="reset_door(door=4)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_4" class="door_closed" onclick="open_door(door=4)">
+                    <h2>4</h2>
+                </div>
             </div>
 
-            <div id="door_closed_4" class="door_closed" onclick="open_door(door=4)">
-                <h2>4</h2>
-            </div>
-        </div>
-
-        <div class="door door_12">
-            <div id="door_open_12" class="door_open" >
-                    <img src="assets/12.jpg" alt="Door 12 Image"> 
+            <div class="door door_12">
+                <div id="door_open_12" class="door_open">
+                    <img src="assets/12.jpg" alt="Door 12 Image">
                     <div class="overlay">
                         <h2>The Nightmare Before Christmas</h2>
                         <h3>1993</h3>
                     </div>
-                    <div id="door_open_12"class="reset" onclick="reset_door(door=12)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_12" class="reset" onclick="reset_door(door=12)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_12" class="door_closed" onclick="open_door(door=12)">
+                    <h2>12</h2>
+                </div>
             </div>
 
-            <div id="door_closed_12" class="door_closed" onclick="open_door(door=12)">
-                <h2>12</h2>
-            </div>
-        </div>
-
-        <div class="door door_8">
-            <div id="door_open_8" class="door_open" >
-                    <img src="assets/8.jpg" alt="Door 8 Image"> 
+            <div class="door door_8">
+                <div id="door_open_8" class="door_open">
+                    <img src="assets/8.jpg" alt="Door 8 Image">
                     <div class="overlay">
                         <h2>Miracle on 34th Street</h2>
                         <h3>1994</h3>
                     </div>
-                    <div id="door_open_8"class="reset" onclick="reset_door(door=8)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_8" class="reset" onclick="reset_door(door=8)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_8" class="door_closed" onclick="open_door(door=8)">
+                    <h2>8</h2>
+                </div>
             </div>
 
-            <div id="door_closed_8" class="door_closed" onclick="open_door(door=8)">
-                <h2>8</h2>
-            </div>
-        </div>
-
-        <div class="door door_24">
-            <div id="door_open_24" class="door_open" >
-                    <img src="assets/24.jpg" alt="Door 24 Image"> 
+            <div class="door door_24">
+                <div id="door_open_24" class="door_open">
+                    <img src="assets/24.jpg" alt="Door 24 Image">
                     <div class="overlay">
                         <h2>It's a Wonderful Life</h2>
                         <h3>1946</h3>
                     </div>
-                    <div id="door_open_24"class="reset" onclick="reset_door(door=24)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_24" class="reset" onclick="reset_door(door=24)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_24" class="door_closed" onclick="open_door(door=24)">
+                    <h2>24</h2>
+                </div>
             </div>
 
-            <div id="door_closed_24" class="door_closed" onclick="open_door(door=24)">
-                <h2>24</h2>
-            </div>
-        </div>
-
-        <div class=" door door_3">
-            <div id="door_open_3" class="door_open" >
-                    <img src="assets/3.jpg" alt="Door 3 Image"> 
+            <div class=" door door_3">
+                <div id="door_open_3" class="door_open">
+                    <img src="assets/3.jpg" alt="Door 3 Image">
                     <div class="overlay">
                         <h2>A Charlie Brown Christmas</h2>
                         <h3>1965</h3>
                     </div>
-                    <div id="door_open_3"class="reset" onclick="reset_door(door=3)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_3" class="reset" onclick="reset_door(door=3)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_3" class="door_closed" onclick="open_door(door=3)">
+                    <h2>3</h2>
+                </div>
             </div>
 
-            <div id="door_closed_3" class="door_closed" onclick="open_door(door=3)">
-                <h2>3</h2>
-            </div>
-        </div>
-
-        <div class="door door_14">
-            <div id="door_open_14" class="door_open" >
-                    <img src="assets/14.jpg" alt="Door 14 Image"> 
+            <div class="door door_14">
+                <div id="door_open_14" class="door_open">
+                    <img src="assets/14.jpg" alt="Door 14 Image">
                     <div class="overlay">
                         <h2>How the Grinch Stole Christmas</h2>
                         <h3>2000</h3>
                     </div>
-                    <div id="door_open_14"class="reset" onclick="reset_door(door=14)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_14" class="reset" onclick="reset_door(door=14)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_14" class="door_closed" onclick="open_door(door=14)">
+                    <h2>14</h2>
+                </div>
             </div>
 
-            <div id="door_closed_14" class="door_closed" onclick="open_door(door=14)">
-                <h2>14</h2>
-            </div>
-        </div>
-
-        <div class="door door_19">
-            <div id="door_open_19" class="door_open" >
-                    <img src="assets/19.jpg" alt="Door 19 Image"> 
+            <div class="door door_19">
+                <div id="door_open_19" class="door_open">
+                    <img src="assets/19.jpg" alt="Door 19 Image">
                     <div class="overlay">
                         <h2>A Christmas Carol</h2>
                         <h3>1938</h3>
                     </div>
-                    <div id="door_open_19"class="reset" onclick="reset_door(door=19)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_19" class="reset" onclick="reset_door(door=19)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_19" class="door_closed" onclick="open_door(door=19)">
+                    <h2>19</h2>
+                </div>
             </div>
 
-            <div id="door_closed_19" class="door_closed" onclick="open_door(door=19)">
-                <h2>19</h2>
-            </div>
-        </div>
-
-        <div class="door door_16">
-            <div id="door_open_16" class="door_open" >
-                    <img src="assets/16.jpg" alt="Door 16 Image"> 
+            <div class="door door_16">
+                <div id="door_open_16" class="door_open">
+                    <img src="assets/16.jpg" alt="Door 16 Image">
                     <div class="overlay">
                         <h2>A Christmas Carol</h2>
                         <h3>2009</h3>
                     </div>
-                    <div id="door_open_16"class="reset" onclick="reset_door(door=16)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_16" class="reset" onclick="reset_door(door=16)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_16" class="door_closed" onclick="open_door(door=16)">
+                    <h2>16</h2>
+                </div>
             </div>
 
-            <div id="door_closed_16" class="door_closed" onclick="open_door(door=16)">
-                <h2>16</h2>
-            </div>
-        </div>
-
-        <div class="door door_5">
-            <div id="door_open_5" class="door_open" >
-                    <img src="assets/5.jpg" alt="Door 5 Image"> 
+            <div class="door door_5">
+                <div id="door_open_5" class="door_open">
+                    <img src="assets/5.jpg" alt="Door 5 Image">
                     <div class="overlay">
                         <h2>The Grinch</h2>
                         <h3>2018</h3>
                     </div>
-                    <div id="door_open_5"class="reset" onclick="reset_door(door=5)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_5" class="reset" onclick="reset_door(door=5)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_5" class="door_closed" onclick="open_door(door=5)">
+                    <h2>5</h2>
+                </div>
             </div>
 
-            <div id="door_closed_5" class="door_closed" onclick="open_door(door=5)">
-                <h2>5</h2>
-            </div>
-        </div>
-
-        <div class="door door_23">
-            <div id="door_open_23" class="door_open" >
-                    <img src="assets/23.jpg" alt="Door 23 Image"> 
+            <div class="door door_23">
+                <div id="door_open_23" class="door_open">
+                    <img src="assets/23.jpg" alt="Door 23 Image">
                     <div class="overlay">
                         <h2>Bad Santa</h2>
                         <h3>2003</h3>
                     </div>
-                    <div id="door_open_23"class="reset" onclick="reset_door(door=23)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_23" class="reset" onclick="reset_door(door=23)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_23" class="door_closed" onclick="open_door(door=23)">
+                    <h2>23</h2>
+                </div>
             </div>
 
-            <div id="door_closed_23" class="door_closed" onclick="open_door(door=23)">
-                <h2>23</h2>
-            </div>
-        </div>
-
-        <div class="door door_7">
-            <div id="door_open_7" class="door_open" >
-                    <img src="assets/7.jpg" alt="Door 7 Image"> 
+            <div class="door door_7">
+                <div id="door_open_7" class="door_open">
+                    <img src="assets/7.jpg" alt="Door 7 Image">
                     <div class="overlay">
                         <h2>The Muppet Christmas Carol</h2>
                         <h3>1992</h3>
                     </div>
-                    <div id="door_open_7"class="reset" onclick="reset_door(door=7)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_7" class="reset" onclick="reset_door(door=7)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_7" class="door_closed" onclick="open_door(door=7)">
+                    <h2>7</h2>
+                </div>
             </div>
 
-            <div id="door_closed_7" class="door_closed" onclick="open_door(door=7)">
-                <h2>7</h2>
-            </div>
-        </div>
-
-        <div class="door door_20">
-            <div id="door_open_20" class="door_open" >
-                    <img src="assets/20.jpg" alt="Door 20 Image"> 
+            <div class="door door_20">
+                <div id="door_open_20" class="door_open">
+                    <img src="assets/20.jpg" alt="Door 20 Image">
                     <div class="overlay">
                         <h2>Christmas with the Kranks</h2>
                         <h3>2004</h3>
                     </div>
-                    <div id="door_open_20"class="reset" onclick="reset_door(door=20)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_20" class="reset" onclick="reset_door(door=20)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_20" class="door_closed" onclick="open_door(door=20)">
+                    <h2>20</h2>
+                </div>
             </div>
 
-            <div id="door_closed_20" class="door_closed" onclick="open_door(door=20)">
-                <h2>20</h2>
-            </div>
-        </div>
-
-        <div class="door door_13">
-            <div id="door_open_13" class="door_open" >
-                    <img src="assets/13.jpg" alt="Door 13 Image"> 
+            <div class="door door_13">
+                <div id="door_open_13" class="door_open">
+                    <img src="assets/13.jpg" alt="Door 13 Image">
                     <div class="overlay">
                         <h2>Santa Clause: The Movie</h2>
                         <h3>1985</h3>
                     </div>
-                    <div id="door_open_13"class="reset" onclick="reset_door(door=13)"><i class="fas fa-redo"></i></div>
+                    <div id="door_open_13" class="reset" onclick="reset_door(door=13)"><i class="fas fa-redo"></i></div>
+                </div>
+
+                <div id="door_closed_13" class="door_closed" onclick="open_door(door=13)">
+                    <h2>13</h2>
+                </div>
             </div>
 
-            <div id="door_closed_13" class="door_closed" onclick="open_door(door=13)">
-                <h2>13</h2>
-            </div>
-        </div>
-
 
         </div>
-    
-        </div>
+
+    </div>
 
     <script>
 
     </script>
 </body>
+
 </html>
