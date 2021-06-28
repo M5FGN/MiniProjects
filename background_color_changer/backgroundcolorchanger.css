@@ -1,0 +1,21 @@
+body {
+    /* Initial Background Color */
+    background-color: #07a49f;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 20px 45px;
+    /* Makes Button Transparent */
+    background-color: transparent;
+    border: 5px solid #ffffff;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    /* Changes cursor over button to a hand */
+    cursor: pointer;
+    color: #ffffff;
+    text-transform: uppercase;  
+}
