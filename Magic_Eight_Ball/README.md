@@ -6,8 +6,9 @@ Digital recreation of the classic Magic 8 Ball.
 
 ## MVP
 
-* Create a Magic 8 Ball visual
-* Display random answers from the list of standard answers
+* Create a Magic 8 Ball visual.
+* Display random answers from the list of standard answers.
+* Be able to reset the Magic 8 Ball.
 
 ## Technologies Used
 
