@@ -16,6 +16,9 @@ Digitallly throw a dice.
 * CSS
 * JavaScript
 
+## View Live
+[View live on CodePen](https://codepen.io/m5fgn/pen/poPoZGz)
+
 ## Screenshots
 
 ![Dice Throw](https://firebasestorage.googleapis.com/v0/b/images-4783e.appspot.com/o/misc_github_images%2Fdicethrow.jpg?alt=media&token=35943c5a-37f1-4149-b348-1626d58fe2cf)  
