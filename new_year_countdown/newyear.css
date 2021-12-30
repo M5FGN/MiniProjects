@@ -1,0 +1,46 @@
+h1 {
+    text-align: center;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#months,
+#weeks,
+#days,
+#hours,
+#mins,
+#secs {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.out_box {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    margin: 10px;
+}
+
+.unit {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        margin: 0 20%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0 10%;
+    }
+}
