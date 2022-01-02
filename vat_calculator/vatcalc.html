@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vatcalc.css">
+    <script src="vatcalc.js"></script>
+    <title>VAT Calculator</title>
+</head>
+
+<body>
+    <h1>VAT Calculator</h1>
+    <form action="">
+
+        <div class="select">
+            <label for="add" class="lbl">Add VAT</label>
+            <input type="radio" name="calctype" id="add" value="add" checked onchange="calcadd()"> 
+            <label for="remove" class="lbl">Remove VAT</label>
+            <input type="radio" name="calctype" id="remove" value="remove" onchange="calcremove()" >
+        </div><br>
+
+        <label for="invalue" class="lbl">Enter Value (£)</label><br>
+        <input type="text" name="invalue" id="invalue"><br>
+
+        <label for="outvalue" class="lbl" id="addout">Vat to be Paid</label>
+        <label for="outvalue" class="lbl" id="removeout">Vat Added</label><br>
+        <input type="text" name="outvalue" id="outvalue" disabled><br>
+
+        <label for="outtotal" class="lbl" id="addtotal">Total including VAT</label>
+        <label for="outtotal" class="lbl" id="removetotal">Total excluding VAT</label><br>
+        <input type="text" name="outtotal" id="outtotal" disabled><br>
+
+        <div class="btns">
+            <input onclick="calcVat()" class="btn" type="button" id="addbtn" value="Calculate">
+            <input onclick="removeVat()" class="btn" type="button" id="removebtn" value="Calculate">
+            <input onclick="reset()" class="btn" type="button"  value="Reset">
+        </div>
+        
+    </form>
+ 
+</body>
+
+</html>

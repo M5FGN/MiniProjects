@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+    color: rgb(37, 139, 139);
+}
+
+form {
+    margin: auto;
+    width: 40%;
+    height: 420px;
+    border: 1px solid rgb(37, 139, 139);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.select {
+   margin: 10px 0px;
+   text-align: center;
+}
+
+#invalue,
+#outvalue,
+#outtotal {
+    width: 90%;
+    margin: 10px;
+    border: 1px solid rgb(37, 139, 139);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(37, 139, 139);
+}
+
+
+.lbl {
+    margin: 10px;
+    font-size: 20px;
+    color: rgb(37, 139, 139);
+}
+
+.btn {
+    width: 40%;
+    margin: 10px;
+    border: 1px solid rgb(37, 139, 139);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(37, 139, 139);
+}
+
+.btns {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#removeout,
+#removetotal,
+#removebtn {
+    display: none;
+}
