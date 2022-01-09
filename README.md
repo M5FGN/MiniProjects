@@ -20,5 +20,7 @@ These Mini Projects are small stand alone components which I have created to pra
 [Stitch Badness Level](https://github.com/M5FGN/mini_projects/tree/master/Stitch_Badness_Level)<br>
 [New Year Countdown](https://github.com/M5FGN/mini_projects/tree/master/new_year_countdown)<br>
 [VAT Calculator](https://github.com/M5FGN/mini_projects/tree/master/vat_calculator)<br>
+[Bill Splitter](https://github.com/M5FGN/mini_projects/tree/master/billsplit)<br>
+
 
 Disclaimer: As I continue to learn and expand my skills the code found in earlier Mini Projects may not reflect my current skill level.
