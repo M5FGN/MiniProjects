@@ -1,0 +1,57 @@
+body {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+form {
+    border: 2px solid purple;
+    border-radius: 5px;
+    width: 60%;
+    padding: 30px;
+    text-align: center;
+}
+
+form > input {
+    padding: 10px;
+    margin: 20px 0px;
+    border: 2px solid purple;
+    border-radius: 5px;
+    width: 70%;
+}
+
+form > label {
+    padding: 10px;
+    font-size: 20px;
+}
+
+form > select {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: rgb(163, 56, 163);
+    font-size: 20px;
+    color: white;
+}
+
+#out {
+    background-color: rgb(163, 56, 163);
+    border-radius: 5px;
+    padding: 40px;
+    margin-bottom: 20px;
+    border: 1px solid purple;
+}
+
+#outsplit {
+    font-size: 50px;
+    color: white;
+}
+
+#outsplitlbl {
+    display: none;
+    font-size: 20px;
+    color: white;
+}

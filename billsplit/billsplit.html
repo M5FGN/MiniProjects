@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="billsplit.css">
+    <script src="billsplit.js"></script>
+    <title>Bill Split Calculator</title>
+</head>
+
+<body>
+        <form action="">
+            <div id="out">
+                <label id="outsplitlbl">Each Diner Pays</label> <br>
+                <label id="outsplit">Bill Splitter</label>
+            </div>
+            <label for="total">Total Bill (£)</label><br>
+            <input type="text" name="intotal" id="intotal"><br>
+            <label class="labels" for="diners">Number of Diners</label><br>
+            <input type="text" name="indiners" id="indiners"><br>
+            <label id="tiplabel" for="tip">Add a Tip (%)</label><br>
+            <select name="tip" id="tip">
+                <option value = 0 selected >0%</option>
+                <option value = 0.15 >15%</option>
+                <option value = 0.2 >20%</option>
+                <option value = 0.25 >25%</option>
+            </select><br>
+            <input onclick="calculate()" type="button" class="button" value="Calculate"><br>
+            <input onclick="resetform()" type="button" class="button" value="Reset">
+        </form>
+</body>
+
+</html>
