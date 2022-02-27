@@ -18,6 +18,9 @@ Christmas Movie Advent Calendar demonstrating some CSS effects and using javascr
 * CSS
 * JavaScript
 
+## View Live
+[View live on GitHub Pages](https://m5fgn.github.io/mini_projects/Advent_Calendar/advent.html)
+
 ## Screenshot
 
 ![Advent Calendar](https://firebasestorage.googleapis.com/v0/b/images-4783e.appspot.com/o/advent_calendar%2Fadventcalendar.jpg?alt=media&token=c7e03a64-7ad3-4cf0-adff-e3d3cc58d407)

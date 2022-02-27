@@ -16,6 +16,9 @@ Digital recreation of the classic Magic 8 Ball.
 * CSS
 * JavaScript
 
+## View Live
+[View live on GitHub Pages](https://m5fgn.github.io/mini_projects/magic_8_ball/magic8.html)
+
 ## Screenshots
 
 ![Magic 8 Ball](https://firebasestorage.googleapis.com/v0/b/images-4783e.appspot.com/o/magic8ball%2Fmagic8ball.jpg?alt=media&token=3f84d313-a0bc-46aa-b193-370c22c9ee5b)  
