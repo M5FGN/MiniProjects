@@ -17,7 +17,7 @@ Digital Stitch virtual pet which displays Stitch's Badness Level depending on pe
 * JavaScript
 
 ## View Live
-[View live on GitHub Pages](https://m5fgn.github.io/mini_projects/Stitch_Badness_Level/stitch.html)
+[View live on GitHub Pages](https://m5fgn.github.io/MiniProjects/Stitch_Badness_Level/stitch.html)
 
 ## Screenshots
 
