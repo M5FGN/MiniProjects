@@ -18,14 +18,14 @@
 
         <fieldset>
             <legend>Tax Year</legend>
-            <input type="radio" name="2021" id="taxYr" value="2021">
+            <input type="radio" name="taxYr1" id="tax2021" value="2021" checked>
             <label for="taxYr">2021/22</label><br>
-            <input type="radio" name="2022" id="taxYr" value="2022">
+            <input type="radio" name="taxYr1" id="tax2022" value="2022">
             <label for="taxYr">2022/23</label>
         </fieldset>
-        <br>
+        <p class="error" id="yearErr1">Error: Choose a Tax Year!</p>
         <label class="frmLbl" for="salVal">Input your salary:</label>
-        <span class="pound">£</span><input class="frmIn" type="text" name="salVal" id="salVal">
+        <span class="pound">£</span><input class="frmIn" type="text" name="salVal1" id="salVal1">
 
         <select name="salUnit" id="salUnit">
             <option value="year">Yearly</option>
@@ -34,14 +34,18 @@
             <option value="day">Daily</option>
             <option value="hour">Hourly</option>
         </select>
-        <br>
+        <p class="error" id="salErr1">Error: Add a Salary Amount!</p>
+        
+
         <label class="frmLbl" for="weekDays">Weekly Days Worked</label>
-        <input class="frmIn" type="number" name="weekHrs" id="weekHrs" min="1" max="7" value="5">
-        <br>
+        <input class="frmIn" type="number" name="days" id="days1" min="1" max="7" value="5">
+        <p class="error" id="daysErr1">Error: Add number of days worked!</p>
+
         <label class="frmLbl" for="weekHrs">Weekly Hours Worked</label>
-        <input class="frmIn"  type="number" name="weekDays" id="weekDays" min="1" max="50" value="35">
-        <br>
-        <input class="button" type="button" value="calculate">
+        <input class="frmIn"  type="number" name="hours" id="hours1" min="1" max="50" value="35">
+        <p class="error" id="hoursErr1">Error: Add number of hours worked!</p>
+
+        <input class="button" type="button" value="Calculate" onclick="calculateSal1()">
 
         <hr>
         <label for="outSal">Salary:</label>
