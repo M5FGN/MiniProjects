@@ -1,0 +1,82 @@
+form {
+    border: 3px solid cornflowerblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+
+hr {
+    border-top: 3px solid cornflowerblue;
+    border-bottom: 0px;
+    border-radius: 4px;
+}
+
+label {
+    /* display: block; */
+    color: cornflowerblue;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+legend {
+    color: cornflowerblue;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+fieldset {
+    width: 100px;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+.frmLbl {
+    display: block;
+    padding: 10px 0;
+}
+
+.button {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 24px;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.frmIn {
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid cornflowerblue;
+    border-radius: 10px;
+}
+
+#salVal {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.pound{
+    font-size: 24px;
+    color: cornflowerblue; 
+    padding-right: 10px;
+}
+
+input[type=number] {
+    width: 80px;
+}
+
+select {
+    width: 120px;
+    font-size: 20px;
+    padding: 10px 10px 11px 10px;
+    border: 1px solid cornflowerblue;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
