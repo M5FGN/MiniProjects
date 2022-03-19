@@ -42,7 +42,7 @@ fieldset {
 }
 
 .button {
-    margin: 40px 0;
+    margin-bottom: 20px;
     padding: 20px;
     background-color: cornflowerblue;
     color: white;
@@ -66,7 +66,7 @@ fieldset {
 .pound{
     font-size: 24px;
     color: cornflowerblue; 
-    padding-right: 10px;
+    padding: 10px;
 }
 
 input[type=number] {
@@ -85,4 +85,13 @@ select {
     font-size: 12px;
     color: red;
     visibility: hidden;
+}
+
+.outLine {
+    margin: 20px;
+}
+
+.outVal {
+    font-size: 24px;
+    color: cornflowerblue;
 }

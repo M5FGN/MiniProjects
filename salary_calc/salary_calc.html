@@ -25,39 +25,50 @@
         </fieldset>
         <p class="error" id="yearErr1">Error: Choose a Tax Year!</p>
         <label class="frmLbl" for="salVal">Input your salary:</label>
-        <span class="pound">£</span><input class="frmIn" type="text" name="salVal1" id="salVal1">
+        <!-- TODO Remove Value -->
+        <span class="pound">£</span><input class="frmIn" type="text" name="salVal1" id="salVal1" value="123456">
 
-        <select name="salUnit" id="salUnit">
+        <select name="salUnit" id="salUnit1">
             <option value="year">Yearly</option>
             <option value="month">Monthly</option>
             <option value="week">Weekly</option>
             <option value="day">Daily</option>
             <option value="hour">Hourly</option>
         </select>
-        <p class="error" id="salErr1">Error: Add a Salary Amount!</p>
-        
+        <p class="error" id="salErr1">Error: Add a salary amount!</p>
+
 
         <label class="frmLbl" for="weekDays">Weekly Days Worked</label>
         <input class="frmIn" type="number" name="days" id="days1" min="1" max="7" value="5">
         <p class="error" id="daysErr1">Error: Add number of days worked!</p>
 
         <label class="frmLbl" for="weekHrs">Weekly Hours Worked</label>
-        <input class="frmIn"  type="number" name="hours" id="hours1" min="1" max="50" value="35">
+        <input class="frmIn" type="number" name="hours" id="hours1" min="1" max="50" value="35">
         <p class="error" id="hoursErr1">Error: Add number of hours worked!</p>
 
-        <input class="button" type="button" value="Calculate" onclick="calculateSal1()">
+        <input class="button" type="button" value="Calculate" onclick="calculate1()">
 
         <hr>
-        <label for="outSal">Salary:</label>
-        <span class="pound">£</span><p id="outSal"></p><br>
-        <label for="outTaxInc">Taxable Income:</label>
-        <span class="pound">£</span><p id="outTaxInc"></p><br>
-        <label for="outTax">Tax Paid:</label>
-        <span class="pound">£</span><p id="outTax"></p><br>
-        <label for="outNI">NI Paid:</label>
-        <span class="pound">£</span><p id="outNI"></p><br>
-        <label for="outTakeHome">Take Home:</label>
-        <span class="pound">£</span><p id="outTakeHome"></p><br>
+        <div class="outLine">
+            <label for="outSal1">Annual Salary:</label>
+            <span class="pound">£</span><span class="outVal" id="outSal1"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTaxInc1">Taxable Income:</label>
+            <span class="pound">£</span><span class="outVal" id="outTaxInc1"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTax1">Tax Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outTax1"></span>
+        </div>
+        <div class="outLine">
+            <label for="outNI1">NI Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outNI1"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTakeHome1">Take Home:</label>
+            <span class="pound">£</span><span class="outVal" id="outTakeHome1"></span>
+        </div>
 
     </form>
 
