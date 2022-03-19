@@ -7,7 +7,7 @@ function inputCheck() {
 
     errors = true;
 
-    year1 = document.getElementById("taxYr1").value;
+    year1 = document.querySelector('input[name="taxYr1"]:checked').value;
     salary1 = document.getElementById("salVal1").value;
     hours1 = document.getElementById("hours1").value;
     days1 = document.getElementById("days1").value;
