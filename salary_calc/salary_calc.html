@@ -19,58 +19,117 @@
         <!-- TODO - Reset output values on Option Change? -->
         <fieldset>
             <legend>Tax Year</legend>
-            <input type="radio" name="taxYear" id="optA" value="optA" checked>
-            <label for="taxYear">2021/22</label><br>
-            <input type="radio" name="taxYear" id="optB" value="optA">
-            <label for="taxYear">2022/23</label>
+            <input type="radio" name="taxYearOrigin" id="optAOrigin" value="optAOrigin" checked>
+            <label for="taxYearOrigin">2021/22</label><br>
+            <input type="radio" name="taxYearOrigin" id="optBOrigin" value="optBOrigin">
+            <label for="taxYearOrigin">2022/23</label>
         </fieldset>
-        <p class="error" id="taxYearErr">Error: Choose a tax year!</p>
-        <label class="frmLbl" for="salVal">Input your salary:</label>
+        <p class="error" id="taxYearErrOrigin">Error: Choose a tax year!</p>
+        <label class="frmLbl" for="salValOrigin">Input your salary:</label>
         <!-- TODO Remove Value -->
-        <span class="pound">£</span><input class="frmIn" type="text" name="salaryVal" id="salaryVal" value="123456">
+        <span class="pound">£</span><input class="frmIn" type="text" name="salaryValOrigin" id="salaryValOrigin" value="123456">
 
-        <select name="salUnit" id="salUnit">
+        <select name="salUnitOrigin" id="salUnitOrigin">
             <option value="year">Yearly</option>
             <option value="month">Monthly</option>
             <option value="week">Weekly</option>
             <option value="day">Daily</option>
             <option value="hour">Hourly</option>
         </select>
-        <p class="error" id="salaryErr">Error: Add a salary amount!</p>
+        <p class="error" id="salaryErrOrigin">Error: Add a salary amount!</p>
 
 
-        <label class="frmLbl" for="weekDays">Weekly Days Worked</label>
-        <input class="frmIn" type="number" name="days" id="days" min="1" max="7" value="5">
-        <p class="error" id="daysErr">Error: Add number of days worked!</p>
+        <label class="frmLbl" for="weekDaysOrigin">Weekly Days Worked</label>
+        <input class="frmIn" type="number" name="daysOrigin" id="daysOrigin" min="1" max="7" value="5">
+        <p class="error" id="daysErrOrigin">Error: Add number of days worked!</p>
 
-        <label class="frmLbl" for="weekHrs">Weekly Hours Worked</label>
-        <input class="frmIn" type="number" name="hours" id="hours" min="1" max="50" value="35">
-        <p class="error" id="hoursErr">Error: Add number of hours worked!</p>
+        <label class="frmLbl" for="weekHrsOrigin">Weekly Hours Worked</label>
+        <input class="frmIn" type="number" name="hoursOrigin" id="hoursOrigin" min="1" max="50" value="35">
+        <p class="error" id="hoursErrOrigin">Error: Add number of hours worked!</p>
 
         <input class="button" type="button" value="Calculate" onclick="calculate()">
 
         <hr>
         <div class="outLine">
-            <label for="outSalary">Annual Salary:</label>
-            <span class="pound">£</span><span class="outVal" id="outSalary"></span>
+            <label for="outSalaryOrigin">Annual Salary:</label>
+            <span class="pound">£</span><span class="outVal" id="outSalaryOrigin"></span>
         </div>
         <div class="outLine">
-            <label for="outTaxInc">Taxable Income:</label>
-            <span class="pound">£</span><span class="outVal" id="outTaxInc"></span>
+            <label for="outTaxIncOrigin">Taxable Income:</label>
+            <span class="pound">£</span><span class="outVal" id="outTaxIncOrigin"></span>
         </div>
         <div class="outLine">
-            <label for="outTaxPaid">Tax Paid:</label>
-            <span class="pound">£</span><span class="outVal" id="outTaxPaid"></span>
+            <label for="outTaxPaidOrigin">Tax Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outTaxPaidOriginOrigin"></span>
         </div>
         <div class="outLine">
-            <label for="outNIPaid">NI Paid:</label>
-            <span class="pound">£</span><span class="outVal" id="outNIPaid"></span>
+            <label for="outNIPaidOrigin">NI Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outNIPaidOrigin"></span>
         </div>
         <div class="outLine">
-            <label for="outTakeHome">Take Home:</label>
-            <span class="pound">£</span><span class="outVal" id="outTakeHome"></span>
+            <label for="outTakeHomeOrigin">Take Home:</label>
+            <span class="pound">£</span><span class="outVal" id="outTakeHomeOrigin"></span>
         </div>
 
+    </form>
+
+    <form action="">
+
+        <!-- TODO - Reset output values on Option Change? -->
+        <fieldset>
+            <legend>Tax Year</legend>
+            <input type="radio" name="taxYearComparison" id="optAComparison" value="optAComparison" checked>
+            <label for="taxYearComparison">2021/22</label><br>
+            <input type="radio" name="taxYearComparison" id="optBComparison" value="optBComparison">
+            <label for="taxYearComparison">2022/23</label>
+        </fieldset>
+        <p class="error" id="taxYearErrComparison">Error: Choose a tax year!</p>
+        <label class="frmLbl" for="salValComparison">Input your salary:</label>
+        <!-- TODO Remove Value -->
+        <span class="pound">£</span><input class="frmIn" type="text" name="salaryValComparison" id="salaryValComparison" value="6789">
+    
+        <select name="salUnitComparison" id="salUnitComparison">
+            <option value="year">Yearly</option>
+            <option value="month">Monthly</option>
+            <option value="week">Weekly</option>
+            <option value="day">Daily</option>
+            <option value="hour">Hourly</option>
+        </select>
+        <p class="error" id="salaryErrComparison">Error: Add a salary amount!</p>
+    
+    
+        <label class="frmLbl" for="weekDaysComparison">Weekly Days Worked</label>
+        <input class="frmIn" type="number" name="daysComparison" id="daysComparison" min="1" max="7" value="5">
+        <p class="error" id="daysErrComparison">Error: Add number of days worked!</p>
+    
+        <label class="frmLbl" for="weekHrsComparison">Weekly Hours Worked</label>
+        <input class="frmIn" type="number" name="hoursComparison" id="hoursComparison" min="1" max="50" value="35">
+        <p class="error" id="hoursErrComparison">Error: Add number of hours worked!</p>
+    
+        <input class="button" type="button" value="Compare" onclick="Compare()">
+    
+        <hr>
+        <div class="outLine">
+            <label for="outSalaryComparison">Annual Salary:</label>
+            <span class="pound">£</span><span class="outVal" id="outSalaryComparison"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTaxIncComparison">Taxable Income:</label>
+            <span class="pound">£</span><span class="outValC" id="outTaxIncComparison"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTaxPaidComparison">Tax Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outTaxPaidComparison"></span>
+        </div>
+        <div class="outLine">
+            <label for="outNIPaidComparison">NI Paid:</label>
+            <span class="pound">£</span><span class="outVal" id="outNIPaidComparison"></span>
+        </div>
+        <div class="outLine">
+            <label for="outTakeHomeComparison">Take Home:</label>
+            <span class="pound">£</span><span class="outVal" id="outTakeHomeComparison"></span>
+        </div>
+    
     </form>
 
 </body>

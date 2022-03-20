@@ -287,7 +287,6 @@ function calculate() {
         takeHome = salary  - taxPaid - NIPaid;
 
 
-
         // FIXME - salary  to two decimal places.
         document.getElementById("outSalary").textContent = salary ;
         document.getElementById("outTaxInc").textContent = taxInc.toFixed(2);
@@ -299,3 +298,7 @@ function calculate() {
         console.log("errors in input");
     };
 }
+
+function compare() {
+console.log("clicked");
+};
