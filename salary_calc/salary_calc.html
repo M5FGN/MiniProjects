@@ -47,7 +47,7 @@
         <input class="frmIn" type="number" name="hoursOrigin" id="hoursOrigin" min="1" max="50" value="35">
         <p class="error" id="hoursErrOrigin">Error: Add number of hours worked!</p>
 
-        <input class="button" type="button" value="Calculate" onclick="calculate()">
+        <input class="button" type="button" value="Calculate" onclick="calculate(calctype='Origin')">
 
         <hr>
         <div class="outLine">
@@ -106,7 +106,7 @@
         <input class="frmIn" type="number" name="hoursComparison" id="hoursComparison" min="1" max="50" value="35">
         <p class="error" id="hoursErrComparison">Error: Add number of hours worked!</p>
     
-        <input class="button" type="button" value="Compare" onclick="Compare()">
+        <input class="button" type="button" value="Compare" onclick="calculate(calctype='Comparison')">
     
         <hr>
         <div class="outLine">
@@ -131,6 +131,8 @@
         </div>
     
     </form>
+
+    <!-- TODO Add buttons with pop-ups with the tax and NI Banks showing in a pop-up -->
 
 </body>
 

@@ -1,14 +1,15 @@
 function reset() {
-    document.getElementById("taxYearErr").style.visibility = "hidden";
-    document.getElementById("salaryErr").style.visibility = "hidden";
-    document.getElementById("daysErr").style.visibility = "hidden";
-    document.getElementById("hoursErr").style.visibility = "hidden";
+    console.log("clicked");
+    document.getElementById("taxYearErr"+calctype).style.visibility = "hidden";
+    document.getElementById("salaryErr"+calctype).style.visibility = "hidden";
+    document.getElementById("daysErr"+calctype).style.visibility = "hidden";
+    document.getElementById("hoursErr"+calctype).style.visibility = "hidden";
 
-    document.getElementById("outSalary").textContent = " ";
-    document.getElementById("outTaxInc").textContent = " ";
-    document.getElementById("outTaxPaid").textContent = " ";
-    document.getElementById("outNIPaid").textContent = " ";
-    document.getElementById("outTakeHome").textContent = " ";
+    document.getElementById("outSalary"+calctype).textContent = " ";
+    document.getElementById("outTaxInc"+calctype).textContent = " ";
+    document.getElementById("outTaxPaid"+calctype).textContent = " ";
+    document.getElementById("outNIPaid"+calctype).textContent = " ";
+    document.getElementById("outTakeHome"+calctype).textContent = " ";
 }
 
 
@@ -16,20 +17,22 @@ function inputCheck() {
 
     errors = true;
 
-    if (!document.querySelector('input[name="taxYear"]:checked').value) {
-        document.getElementById("taxYearErr").style.visibility = "visible";
+    console.log(calctype)
+
+    // if (!document.querySelector('input[name="taxYear"+calctype]:checked').value) {
+    //     document.getElementById("taxYearErr"+calctype).style.visibility = "visible";
+    //     errors = false;
+    // }
+    if (!document.getElementById("salaryVal"+calctype).value) {
+        document.getElementById("salaryErr"+calctype).style.visibility = "visible";
         errors = false;
     }
-    if (!document.getElementById("salaryVal").value) {
-        document.getElementById("salaryErr").style.visibility = "visible";
+    if (!document.getElementById("days"+calctype).value) {
+        document.getElementById("daysErr"+calctype).style.visibility = "visible";
         errors = false;
     }
-    if (!document.getElementById("days").value) {
-        document.getElementById("daysErr").style.visibility = "visible";
-        errors = false;
-    }
-    if (!document.getElementById("hours").value) {
-        document.getElementById("hoursErr").style.visibility = "visible";
+    if (!document.getElementById("hours"+calctype).value) {
+        document.getElementById("hoursErr"+calctype).style.visibility = "visible";
         errors = false;
     }
 
@@ -38,11 +41,11 @@ function inputCheck() {
 
 function calculateSalary() {
 
-    let salary = document.getElementById("salaryVal").value;
-    let hours = document.getElementById("hours").value;
-    let days = document.getElementById("days").value;
+    let salary = document.getElementById("salaryVal"+calctype).value;
+    let hours = document.getElementById("hours"+calctype).value;
+    let days = document.getElementById("days"+calctype).value;
 
-    let unit = document.querySelector('#salUnit').value;
+    let unit = document.querySelector('#salUnit'+calctype).value;
 
     if (unit == "year") {
         return salary ;
@@ -65,7 +68,7 @@ function calculateTaxInc() {
 
     taxInc = 0;
 
-    let year = document.querySelector('input[name="taxYear"]:checked').value;
+    let year = document.querySelector('input[name="taxYear"+calctype]:checked').value;
 
     // Starting Points and Percentage paid for each tax bracket
 // Source: https://www.gov.uk/scottish-income-tax
@@ -100,7 +103,7 @@ function calculateTaxPaid() {
 
     let taxPaid = 0;
 
-    let year = document.querySelector('input[name="taxYear"]:checked').value;
+    let year = document.querySelector('input[name="taxYear"+calctype]:checked').value;
 
     // Starting Points and Percentage paid for each tax bracket
     // Source: https://www.gov.uk/scottish-income-tax
@@ -226,7 +229,7 @@ function calculateNI() {
 
     let NIPaidWeekly = 0;
 
-    let year = document.querySelector('input[name="taxYear"]:checked').value;
+    let year = document.querySelector('input[name="taxYear"+calctype]:checked').value;
     let weeklySalary = calculateSalary()/52;
     console.log(weeklySalary);
 
@@ -272,27 +275,29 @@ function calculateNI() {
 
 function calculate() {
 
-    reset();
+    console.log(calctype)
 
-    if (inputCheck() == true) {
+    // reset(calctype);
+
+    if (inputCheck(calctype) == true) {
         console.log("no errors");
 
-        salary  = calculateSalary();
-        console.log(salary 
-);
-        taxInc = calculateTaxInc();
-        taxPaid = calculateTaxPaid();
-        console.log(taxPaid)
-        NIPaid = calculateNI();
-        takeHome = salary  - taxPaid - NIPaid;
+//         salary  = calculateSalary();
+//         console.log(salary 
+// );
+//         taxInc = calculateTaxInc();
+//         taxPaid = calculateTaxPaid();
+//         console.log(taxPaid)
+//         NIPaid = calculateNI();
+//         takeHome = salary  - taxPaid - NIPaid;
 
 
-        // FIXME - salary  to two decimal places.
-        document.getElementById("outSalary").textContent = salary ;
-        document.getElementById("outTaxInc").textContent = taxInc.toFixed(2);
-        document.getElementById("outTaxPaid").textContent = taxPaid.toFixed(2);
-        document.getElementById("outNIPaid").textContent = NIPaid.toFixed(2);
-        document.getElementById("outTakeHome").textContent = takeHome.toFixed(2);
+//         // FIXME - salary  to two decimal places.
+//         document.getElementById("outSalary"+calctype).textContent = salary ;
+//         document.getElementById("outTaxInc"+calctype).textContent = taxInc.toFixed(2);
+//         document.getElementById("outTaxPaid"+calctype).textContent = taxPaid.toFixed(2);
+//         document.getElementById("outNIPaid"+calctype).textContent = NIPaid.toFixed(2);
+//         document.getElementById("outTakeHome"+calctype).textContent = takeHome.toFixed(2);
 
     } else {
         console.log("errors in input");
