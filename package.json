@@ -1,0 +1,26 @@
+{
+  "name": "mini_projects",
+  "version": "1.0.0",
+  "description": "These Mini Projects are small stand alone components which I have created to practice HTML, CSS and JavaScript. Through their creation I have either learned something new or they have helped to build my confidence.",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M5FGN/mini_projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/M5FGN/mini_projects/issues"
+  },
+  "homepage": "https://github.com/M5FGN/mini_projects#readme",
+  "dependencies": {
+    "jsdocs": "^1.0.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.11"
+  }
+}
