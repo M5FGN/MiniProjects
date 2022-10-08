@@ -1,3 +1,14 @@
+/**
+ * @version 1.1
+ * @description Digital recreation of the classic Magic 8 Ball.
+ * @author Mary Fagan
+ */
+
+
+/**
+ * Displays randomly chosen text.
+ * @todo Consider separaing this into multiple functions.
+ */
 function func_shake() {
 
     document.getElementById("white_ball").style.display = "none";
@@ -107,6 +118,9 @@ function func_shake() {
 }
 
 
+/**
+ * Resets the display on the ball.
+ */
 function func_reset() {
     document.getElementById("white_ball").style.display = "inline-block";
     document.getElementById("blue_triangle").style.display = "none";
