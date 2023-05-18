@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+    #main {
+        background-color: lemonchiffon;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h1, h2, p {
+        color: darkslateblue;
+        text-align: center;
+    }
+
+    .packPrice {
+        color: black;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    #packageCat, #packageLion, #packageTiger {
+        position: relative;
+        background-color: lightblue;
+        padding: 20px;
+        margin: 10px;
+        width: 200px;
+        height: 300px;
+    }
+
+    li {
+        list-style-image: url("images/paw.png");
+        padding: 5px 0px;
+    }
+
+    ul {
+        padding-inline-start: 10px;
+    }
+
+    .signUp {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid darkslategray;
+    }
+
+</style>
+
+    <h1>Kitty Nibbles</h1>
+    <p>Tailored natural food subscription for your feline friend.</p>
+
+    <div id="main">
+        <div id="packageCat">
+            <h2 class="packName">Cat Package</h2>
+            <p class="packPrice">£9.99/month</p>
+            <ul class="packList">
+                <li>Food for the month</li>
+                <li>Friday Treat</li>
+                <li>Monthly Toy</li>
+             
+            </ul>
+                    <input type="button" class="signUp" value="Sign Up">
+        </div>
+        <div id="packageLion">
+            <h2 class="packName">Lion Package</h2>
+            <p class="packPrice">£15.99/month</p>
+            <ul class="packList">
+                <li>Premium food for the month</li>
+                <li>Friday Treat</li>
+                <li>Weekly Biodegradable Toy</li>
+              
+            </ul>
+                <input type="button" class="signUp" value="Sign Up">
+        </div>
+        <div id="packageTiger">
+            <h2 class="packName">Tiger Package</h2>
+            <p class="packPrice">£18.99/month</p>
+            <ul class="packList">
+                <li>Delux food for the month </li>
+                <li>Friday treats and a game</li>
+                <li>Weekly biodegradable toy</li>
+                <li>Pet Insurance</li>
+            </ul>
+                <input type="button" class="signUp" value="Sign Up">
+        </div>
+    </div>
+
+</body>
+</html>
