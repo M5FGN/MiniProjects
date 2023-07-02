@@ -58,7 +58,7 @@ h3 {
     position: relative;
     border: 2px solid silver; 
     border-radius: 15px;
-    background-color: skyblue;
+    background-color: hsl(197, 71%, 73%);
     border-radius: 15px;
 }
 
@@ -68,7 +68,7 @@ h3 {
 }
 
 .door_open {
-    background-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
 }
 
 .door_open img {

@@ -1,3 +1,6 @@
+/**
+ * Reset all input and output fields.
+ */
 function reset() {
     document.getElementById("taxYearErr").style.visibility = "hidden";
     document.getElementById("salaryErr").style.visibility = "hidden";
@@ -11,7 +14,11 @@ function reset() {
     document.getElementById("outTakeHome").textContent = " ";
 }
 
-
+// DOCUMENT - To Add
+/**
+ * Form validation - checks for errors and displays errors if needed.
+ * @returns {boolean} Returns True if errors exist, otherwise, False.
+ */
 function inputCheck() {
 
     errors = true;
@@ -36,6 +43,11 @@ function inputCheck() {
     return errors;
 }
 
+// DOCUMENT - To Add
+/**
+ * 
+ * @returns 
+ */
 function calculateSalary() {
 
     let salary = document.getElementById("salaryVal").value;
@@ -61,6 +73,11 @@ function calculateSalary() {
     }
 }
 
+// DOCUMENT - To Add
+/**
+ * 
+ * @returns 
+ */
 function calculateTaxInc() {
 
     taxInc = 0;
@@ -96,6 +113,11 @@ function calculateTaxInc() {
     return taxInc;
 }
 
+// DOCUMENT - To Add
+/**
+ * 
+ * @returns 
+ */
 function calculateTaxPaid() {
 
     let taxPaid = 0;
@@ -222,6 +244,11 @@ function calculateTaxPaid() {
 
 }
 
+// DOCUMENT - To Add
+/**
+ * 
+ * @returns 
+ */
 function calculateNI() {
 
     let NIPaidWeekly = 0;
@@ -270,6 +297,15 @@ function calculateNI() {
 
 }
 
+// DOCUMENT - To Add
+/**
+ * 
+ * @callback inputCheck()
+ * @callback calculateSalary()
+ * @callback calculateTaxPaid()
+ * @callback calculateNI()
+ * @returns 
+ */
 function calculate() {
 
     reset();
@@ -278,8 +314,7 @@ function calculate() {
         console.log("no errors");
 
         salary  = calculateSalary();
-        console.log(salary 
-);
+        console.log(salary);
         taxInc = calculateTaxInc();
         taxPaid = calculateTaxPaid();
         console.log(taxPaid)

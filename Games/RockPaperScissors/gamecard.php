@@ -76,18 +76,25 @@ $p2 = 0;
         <?php 
             
             // TODO - Add note to say why added isset
-            $mode = $_GET['mode'];
+            if (isset($_GET['mode'])) {
+                $mode = $_GET['mode']; 
+            } else {
+                $mode = 0;
+            }                
 
+        ?>
+
+    <?php
             // TODO - Add note on rand
             // if ($mode == 1) {
             //     $p2 = rand(1, 3);
             // }
 
-            if (!$mode){
-                print_r("<h2 class='error'>Choose a Player Mode.</h2>");
-            } 
 
-            if ($mode == 1) {
+
+            if ($mode == 0){
+                print_r("<h2 class='error'>Choose a Player Mode.</h2>");
+            } else if ($mode == 1) {
                 print_r("<h2>You are playing against the computer.</h2>");
                 print_r("<h2 id='turn'>Player 1 to choose ...</h2>");
             } elseif ($mode == 2) {
@@ -95,13 +102,13 @@ $p2 = 0;
                 print_r("<h2 id='turn'>Player 1 to choose ...</h2>");
             }
 
-            $turn = 1;
+            // $turn = 1;
         ?>
 
         <div id="moves">
             <a href="#" id="move_1"><i class="fa-solid fa-hand-back-fist"></i></a>
-            <a href="#" id="move_2"><i class="fa-sharp fa-solid fa-hand"></i></a>
-            <a href="#" id="move_3"><i class="fa-solid fa-hand-scissors"></i></a>  
+            <a href="#" id="move_2" ><i class="fa-sharp fa-solid fa-hand"></i></a>
+            <a href="#" id="move_3" ><i class="fa-solid fa-hand-scissors"></i></a>  
         </div>
       
 
@@ -126,9 +133,22 @@ $p2 = 0;
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-        console.log("mode " + <?php echo $mode; ?>);
         
         $(document).ready(function(){
+
+            function hide_moves(){
+                $('#move_1').hide();
+                $('#move_2').hide();
+                $('#move_3').hide();
+            }
+
+            function show_moves(){
+                $('#move_1').show();
+                $('#move_2').show();
+                $('#move_3').show();
+            }
+
+            console.log("mode " + <?php echo $mode; ?>);
 
             // Switch Mode
             $("#p1").click(function(){
@@ -138,44 +158,52 @@ $p2 = 0;
                 $(location).attr('href', 'gamecard.php?mode=2')
             });
 
-            $("#player_turn").val(1);
+
+            if(<?php echo $mode == 0 ?>) {
+                hide_moves();
+            } else {
+                show_moves();
+            }
+
+
+            // $("#player_turn").val(1);
 
             // Mode 1 - Set Player 2
-            if (<?php echo $mode ?> == 1){
-                $("#p2_move").val(Math.ceil(Math.random()*3));
-            }
+            // if (<?php echo $mode ?> == 1){
+            //     $("#p2_move").val(Math.ceil(Math.random()*3));
+            // }
 
             // Player 1
-            if ($("#player_turn").val() == 1) {
-                console.log($("#player_turn").val());
-                $("#move_1").click(function(){
-                    $("#p1_move").val(1);
-                    $("#player_turn").val(2);
-                })
-                $("#move_2").click(function(){
-                    $("#p1_move").val(2);
-                    $("#player_turn").val(2);
-                })
-                $("#move_3").click(function(){
-                    $("#p1_move").val(3);
-                    $("#player_turn").val(2);
-                })
-            }
+            // if ($("#player_turn").val() == 1) {
+            //     console.log($("#player_turn").val());
+            //     $("#move_1").click(function(){
+            //         $("#p1_move").val(1);
+            //         $("#player_turn").val(2);
+            //     })
+            //     $("#move_2").click(function(){
+            //         $("#p1_move").val(2);
+            //         $("#player_turn").val(2);
+            //     })
+            //     $("#move_3").click(function(){
+            //         $("#p1_move").val(3);
+            //         $("#player_turn").val(2);
+            //     })
+            // }
             
             // Player 2
-            if ((<?php echo $mode ?> == 2) && ($("#player_turn").val() == 2) ){
-                $("#turn").text("Player 1 to choose ...");
+            // if ((<?php echo $mode ?> == 2) && ($("#player_turn").val() == 2) ){
+            //     $("#turn").text("Player 1 to choose ...");
 
-                $("#move_1").click(function(){
-                    $("#p2_move").val(1);
-                })
-                $("#move_2").click(function(){
-                    $("#p2_move").val(2);
-                })
-                $("#move_3").click(function(){
-                $("#p2_move").val(3);
-                })
-            }      
+            //     $("#move_1").click(function(){
+            //         $("#p2_move").val(1);
+            //     })
+            //     $("#move_2").click(function(){
+            //         $("#p2_move").val(2);
+            //     })
+            //     $("#move_3").click(function(){
+            //     $("#p2_move").val(3);
+            //     })
+            // }      
         });
     </script>
 </html>
