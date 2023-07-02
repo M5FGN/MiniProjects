@@ -4,9 +4,14 @@
 // Paper == 2;
 // Scissors == 3; 
 
-// TODO can the player variables start with no value?
-$p1 = 0;
-$p2 = 0;
+    $p1 = 0;
+    $p2 = 0;
+         
+    if (isset($_GET['mode'])) {
+        $mode = $_GET['mode']; 
+    } else {
+        $mode = 0;
+    }                
 
 ?>
 
@@ -72,51 +77,20 @@ $p2 = 0;
         </style>
 
         <h1>Rock Paper Scissors</h1>
+        <h2 id="message"></h2>
+        <h2 id="turn"></h2>
 
-        <?php 
-            
-            // TODO - Add note to say why added isset
-            if (isset($_GET['mode'])) {
-                $mode = $_GET['mode']; 
-            } else {
-                $mode = 0;
-            }                
-
-        ?>
-
-    <?php
-            // TODO - Add note on rand
-            // if ($mode == 1) {
-            //     $p2 = rand(1, 3);
-            // }
-
-
-
-            if ($mode == 0){
-                print_r("<h2 class='error'>Choose a Player Mode.</h2>");
-            } else if ($mode == 1) {
-                print_r("<h2>You are playing against the computer.</h2>");
-                print_r("<h2 id='turn'>Player 1 to choose ...</h2>");
-            } elseif ($mode == 2) {
-                print_r("<h2>You are playing against a friend.</h2>");  
-                print_r("<h2 id='turn'>Player 1 to choose ...</h2>");
-            }
-
-            // $turn = 1;
-        ?>
 
         <div id="moves">
             <a href="#" id="move_1"><i class="fa-solid fa-hand-back-fist"></i></a>
-            <a href="#" id="move_2" ><i class="fa-sharp fa-solid fa-hand"></i></a>
-            <a href="#" id="move_3" ><i class="fa-solid fa-hand-scissors"></i></a>  
+            <a href="#" id="move_2"><i class="fa-sharp fa-solid fa-hand"></i></a>
+            <a href="#" id="move_3"><i class="fa-solid fa-hand-scissors"></i></a>  
         </div>
       
-
-
         <br>
-        <input type="text" id="p1_move">
-        <input type="text" id="p2_move">
-        <input type="text" id="player_turn">
+        <input type="hidden" id="p1_move">
+        <input type="hidden" id="p2_move">
+        <input type="hidden" id="player_turn">
         <br>
 
         <br>
@@ -126,7 +100,6 @@ $p2 = 0;
         <input type="button" id="p1" value="Player 1 Vrs Computer">
         <input type="button" id="p2" value="Player 1 Vrs Player 2">
         </div>
-
 
     </body>
 
@@ -148,6 +121,67 @@ $p2 = 0;
                 $('#move_3').show();
             }
 
+            function hide_messages(){
+                $('.play_message').hide();
+            }
+
+            function check_winner(){
+                if ($("#p1_move").val() && $("#p2_move").val()){
+
+                    $("#turn").hide();
+
+                    if (<?php echo $mode ?> == 2) {
+                        player2 = "Player 2"; 
+                    } else {
+                        player2 = "Computer";
+                    }
+
+                    if ($("#p1_move").val() == $("#p2_move").val()) {
+                        winning_message = "Draw - There is no winner!";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                    if ($("#p1_move").val() == 1 && $("#p2_move").val() == 2) {
+                        winning_message = player2 + " (Paper) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                        
+                    }
+                    if ($("#p1_move").val() == 2 && $("#p2_move").val() == 3) {
+                        winning_message = player2 + " (Scissors) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                    if ($("#p1_move").val() == 3 && $("#p2_move").val() == 1) {
+                        winning_message = "Player 1 (Rock) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                    if ($("#p2_move").val() == 1 && $("#p1_move").val() == 2) {
+                        winning_message ="Player 1 (Paper) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                    if ($("#p2_move").val() == 2 && $("#p1_move").val() == 3) {
+                        winning_message ="Player 1 (Scissors) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                    if ($("#p2_move").val() == 3 && $("#p1_move").val() == 1) {
+                        winning_message = player2 + " (Rock) - Wins";
+                        hide_moves();
+                        hide_messages();
+                        $("#message").text(winning_message);
+                    }
+                }
+            }
+
             console.log("mode " + <?php echo $mode; ?>);
 
             // Switch Mode
@@ -159,51 +193,70 @@ $p2 = 0;
             });
 
 
-            if(<?php echo $mode == 0 ?>) {
+            if(<?php echo $mode ?> == 0) {
                 hide_moves();
-            } else {
+                error = "Choose a Player Mode.";
+                $("#message").text(error);
+            } else { 
+                $("#player_turn").val("1");
                 show_moves();
             }
 
+            if (<?php echo $mode ?> == 1) {
+                message = "You are playing against the computer.";
+                turn_message = "Player 1 to choose ...";
 
-            // $("#player_turn").val(1);
+                $("#message").text(message);
+                $("#turn").text(turn_message);
 
-            // Mode 1 - Set Player 2
-            // if (<?php echo $mode ?> == 1){
-            //     $("#p2_move").val(Math.ceil(Math.random()*3));
-            // }
+                let p2 = Math.round(Math.random()*(3-1)+1);
+                $("#p2_move").val(p2);
+            }
 
-            // Player 1
-            // if ($("#player_turn").val() == 1) {
-            //     console.log($("#player_turn").val());
-            //     $("#move_1").click(function(){
-            //         $("#p1_move").val(1);
-            //         $("#player_turn").val(2);
-            //     })
-            //     $("#move_2").click(function(){
-            //         $("#p1_move").val(2);
-            //         $("#player_turn").val(2);
-            //     })
-            //     $("#move_3").click(function(){
-            //         $("#p1_move").val(3);
-            //         $("#player_turn").val(2);
-            //     })
-            // }
-            
-            // Player 2
-            // if ((<?php echo $mode ?> == 2) && ($("#player_turn").val() == 2) ){
-            //     $("#turn").text("Player 1 to choose ...");
+            if (<?php echo $mode ?> == 2) {
+                message = "You are playing against a friend.";
+                turn_message = "Player 1 to choose ...";
+                $("#message").text(message);
+                $("#turn").text(turn_message);
+            }
 
-            //     $("#move_1").click(function(){
-            //         $("#p2_move").val(1);
-            //     })
-            //     $("#move_2").click(function(){
-            //         $("#p2_move").val(2);
-            //     })
-            //     $("#move_3").click(function(){
-            //     $("#p2_move").val(3);
-            //     })
-            // }      
+            $("#move_1").click(function(){
+                if($("#player_turn").val() == 1) {
+                    $("#p1_move").val(1);
+                } else if($("#player_turn").val() == 2 && !$("#p2_move").val()) {
+                    $("#p2_move").val(1);
+                } 
+                $("#player_turn").val(2);
+                turn_message = "Player 2 to choose ...";
+                $("#turn").text(turn_message);
+                check_winner();
+            })
+
+            $("#move_2").click(function(){
+                if($("#player_turn").val() == 1) {
+                    $("#p1_move").val(2);
+                } else if($("#player_turn").val() == 2 && !$("#p2_move").val()) {
+                    $("#p2_move").val(2);
+                } 
+                $("#player_turn").val(2);
+                turn_message = "Player 2 to choose ...";
+                $("#turn").text(turn_message);
+                check_winner();
+            })
+
+            $("#move_3").click(function(){
+                if($("#player_turn").val() == 1) {
+                    $("#p1_move").val(3);
+                } else if($("#player_turn").val() == 2 && !$("#p2_move").val()) {
+                    $("#p2_move").val(3);
+                } 
+                $("#player_turn").val(2);
+                turn_message = "Player 2 to choose ...";
+                $("#turn").text(turn_message);
+                check_winner();
+            })
+
+    
         });
     </script>
 </html>
